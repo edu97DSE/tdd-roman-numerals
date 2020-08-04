@@ -57,7 +57,7 @@ void RomanNumeral_Convert(unsigned input, char *output)
             *output = 'L';
             output++;
             break;
-         case 5: printf ("L"); 
+         case 5:
             *output = 'L';
             output++;
             break;
