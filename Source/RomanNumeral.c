@@ -15,22 +15,21 @@ void RomanNumeral_Convert(unsigned input, char *output)
 {
    char *CharactersArray []= {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
    unsigned DecimalArray []= {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-   unsigned i, arrayAdress, tableSize;
+   unsigned tableSize;
 
-   for(i = 0; i <= 999; i++)
+   for(unsigned i = 0; i <= 999; i++)
       {
          output[i] = 0;
       }
 
    tableSize = sizeof(CharactersArray) / sizeof(char *);
-   for(arrayAdress = 0; arrayAdress < tableSize; arrayAdress++)
+   for(unsigned arrayAddress = 0; arrayAddress < tableSize; arrayAddress++)
       {
-         while(input >= DecimalArray[arrayAdress])
+         while(input >= DecimalArray[arrayAddress])
             {
-               output = Append(output, CharactersArray[arrayAdress]);
-               input = (input - DecimalArray[arrayAdress]);
-            }
-         
+               output = Append(output, CharactersArray[arrayAddress]);
+               input = (input - DecimalArray[arrayAddress]);
+            }  
       }
    
 }
