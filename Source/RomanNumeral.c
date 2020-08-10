@@ -28,7 +28,7 @@ void RomanNumeral_Convert(unsigned input, char *output)
          while(input >= DecimalArray[arrayAddress])
             {
                output = Append(output, CharactersArray[arrayAddress]);
-               input = (input - DecimalArray[arrayAddress]);
+               input -= DecimalArray[arrayAddress];
             }  
       }
    
