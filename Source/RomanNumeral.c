@@ -31,5 +31,4 @@ void RomanNumeral_Convert(unsigned input, char *output)
                input -= DecimalArray[arrayAddress];
             }  
       }
-   
 }
